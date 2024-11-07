@@ -73,13 +73,23 @@ graph TD
 
 ## `figure_2.1-3.txt`
 ```mermaid
-flowchart TD
-    A[Bayesian Network in Risk Analysis] --> B[Define Variables as Nodes]
-    B --> C[Establish Conditional Dependencies as Edges]
-    C --> D[Model Probabilistic Relationships]
-    D --> E[Represent Dependencies and Uncertainties]
-    E --> F[Analyze and Assess Risks]
-
+graph TD
+    Weather((Weather))
+    Season((Season))
+    Rain((Rain))
+    Sprinkler((Sprinkler))
+    WetGrass((Wet Grass))
+    Traffic((Traffic))
+    Accident((Accident))
+    
+    Season --> Weather
+    Weather --> Rain
+    Weather --> Sprinkler
+    Rain --> WetGrass
+    Sprinkler --> WetGrass
+    Rain --> Traffic
+    Traffic --> Accident
+    WetGrass --> Accident
 ```
 
 ---
